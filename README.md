@@ -68,3 +68,89 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+# 🎬 MERN Video Library
+
+A full-stack video library web application built using the MERN (MongoDB, Express, React, Node.js) stack. This platform allows **Admins** to manage videos and users to **view**, **like**, **dislike**, **comment**, **search**, and **filter** videos. Admins have full CRUD capabilities, while users can interact with embedded YouTube videos.
+
+---
+
+## 🚀 Features
+
+### 🔐 Authentication
+- User & Admin roles with JWT-based authentication
+- Authentication forms powered by **Formik**
+- Cookie management for secure login sessions
+
+### 👤 Admin
+- Perform **Create, Read, Update, Delete (CRUD)** operations on videos
+- Upload videos using YouTube embed links
+- View all user interactions (likes, dislikes, comments)
+
+### 👥 Users
+- View a list of uploaded videos
+- **Like**, **Dislike**, and **Comment** on videos
+- Watch embedded YouTube videos
+- **Search** videos by title
+- **Filter** videos by category
+
+### 🧰 Tech Stack
+
+| Area                | Technology              |
+|---------------------|--------------------------|
+| Frontend            | React.js                 |
+| Backend             | Node.js, Express.js      |
+| Database            | MongoDB                  |
+| Form Handling       | Formik                   |
+| Routing             | React Router DOM         |
+| Authentication      | JWT, Cookies             |
+| State & Effects     | React Hooks              |
+
+---
+
+## 📂 Project Structure
+
+🔒 Authentication & Roles
+Admin Login: Full access (CRUD, user management)
+
+User Login: Limited access (Read-only with interaction)
+
+🔍 Search & Filter
+Search bar available to quickly find videos by title.
+
+Filter dropdown to view videos by specific categories.
+
+📝 Commenting System
+Users can:
+
+Add comments
+
+View others' comments
+
+React to videos via likes/dislikes
+
+📦 API Endpoints (Sample)
+Auth
+POST /api/auth/register
+
+POST /api/auth/login
+
+Videos
+GET /api/videos - All videos
+
+GET /api/videos/:id - Single video
+
+POST /api/videos (Admin only)
+
+PUT /api/videos/:id (Admin only)
+
+DELETE /api/videos/:id (Admin only)
+
+Interactions
+POST /api/videos/:id/like
+
+POST /api/videos/:id/dislike
+
+POST /api/videos/:id/comment
